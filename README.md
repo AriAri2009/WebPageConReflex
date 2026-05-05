@@ -80,7 +80,7 @@ Asegúrate de tener instalados en tu sistema:
 Abre tu terminal y ejecuta los siguientes comandos:
 ```bash
 # Clonar el proyecto
-git clone [https://github.com/TU-USUARIO/WebPageConReflex.git](https://github.com/TU-USUARIO/WebPageConReflex.git)
+git clone https://github.com/AriAri2009/WebPageConReflex.git
 cd WebPageConReflex
 
 # Instalar Reflex y sus dependencias con Poetry
