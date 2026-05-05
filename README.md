@@ -3,22 +3,25 @@
 
 # Descripción:
 
-Esta es una aplicación web interactiva de una sola página (SPA) desarrollada con Python utilizando el framework Reflex. Su propósito es demostrar cómo conectar una interfaz visual con lógica de programación en tiempo real mediante manejo de estado, sin necesidad de recargar la página ni usar JavaScript.
+Esta aplicación es una página web interactiva de una sola página (SPA) desarrollada en Python utilizando el framework Reflex.
+
+El proyecto implementa un sistema de interacción cíclica donde el usuario recibe frases motivacionales dinámicas al presionar un botón, creando una experiencia continua basada en el manejo de estado.
 
 # ¿Qué hace la aplicación?
 
 La aplicación permite al usuario interactuar con un botón que cambia dinámicamente el contenido y estilo de la página:
 
--Muestra un mensaje inicial de bienvenida
+-Muestra un mensaje inicial invitando a interactuar
 
--Permite interactuar mediante un botón
+-Al hacer clic, presenta una frase motivacional con colores llamativos
 
--Cambia el texto y el color al hacer clic
+-Alterna entre invitación y recompensa en cada clic
 
--Permite alternar entre el estado inicial y el modificado
+-Recorre una secuencia de frases
 
+-Se reinicia automáticamente al finalizar el ciclo
 
-Todo esto ocurre de forma instantánea, sin recargas.
+El usuario puede interactuar indefinidamente, generando una experiencia dinámica y repetible.
 
 # Tecnologías utilizadas:
 -Python 
@@ -34,37 +37,53 @@ Todo esto ocurre de forma instantánea, sin recargas.
 
 # ¿Cómo funciona?
 **-Pantalla inicial**
-El usuario ve un título con el nombre del proyecto y un mensaje de bienvenida.
+
+El usuario ve el título del proyecto junto a un diseño personalizado con una imagen de fondo y un contenedor central donde aparecerán los mensajes.
 
 **-Mensaje central**
-Se muestra una instrucción:
+
+Se muestra una instrucción inicial:
 "¡Haz clic en el botón para ver la magia!"
+Este mensaje aparece en un color neutro, indicando que el sistema está en espera.
 
 **-Interacción**
-Un botón permite al usuario interactuar con la aplicación.
+
+El usuario puede presionar el botón para comenzar la experiencia interactiva.
 
 **-Cambio dinámico**
-Al hacer clic:
-El texto cambia a un mensaje de éxito 🎉
-El color del texto se vuelve más llamativo
 
-**-Alternancia**
-Si el usuario vuelve a hacer clic, el mensaje regresa a su estado original.
+Al hacer clic:
+Se muestra una frase motivacional diferente 
+El color del texto cambia a un tono más llamativo (azul, naranja, índigo o púrpura)
+
+**-Flujo continuo**
+
+Cada vez que el usuario hace clic, el sistema avanza a la siguiente frase de la lista.
+
+**-Reinicio automático**
+
+Cuando se muestran todas las frases, el sistema vuelve al inicio automáticamente, permitiendo repetir el ciclo indefinidamente.
 
 # ¿Cómo funciona internamente?
 
 La aplicación utiliza una arquitectura reactiva basada en:
 
 **-Estado (State):**
-Guarda el texto y el color actuales.
+Guarda el índice actual, la lista de frases, el mensaje mostrado y el color del texto.
+
+**-Lista de frases:**
+Contiene tanto mensajes de invitación como frases motivacionales organizadas en un orden específico.
 
 **-Evento (interactuar):**
-Función en Python que se ejecuta al hacer clic y modifica el estado.
+Función en Python que se ejecuta al hacer clic y cambia a la siguiente frase.
+
+**-Control del ciclo:**
+El sistema avanza en la lista y, al llegar al final, vuelve al inicio automáticamente.
 
 **-Interfaz (UI):**
-Se actualiza automáticamente cuando el estado cambia, sin recargar la página.
+Se actualiza en tiempo real cuando cambia el estado, sin necesidad de recargar la página.
 
-Esto permite una experiencia fluida y en tiempo real, como si la página “pensara” mientras el usuario interactúa.
+Esto permite una experiencia interactiva continua, donde cada clic genera una nueva respuesta visual, haciendo que la página se sienta dinámica y viva.
 
 ##  Instrucciones para Ejecutar el Proyecto:
 
